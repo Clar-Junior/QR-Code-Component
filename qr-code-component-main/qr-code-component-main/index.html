@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | QR code component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>   
+  @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+  
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+
+
+    body{
+      width: 100vw;
+      height: 100vh;
+      background: hsl(212, 45%, 89%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    .container {
+      width: 360px;
+      height: 525px;
+      background: hsl(0, 0%, 100%);
+      border-radius: 18px;
+      /* display: flex;
+      flex-direction: column;
+      align-items: center; */
+    }
+
+    .container .qrCode a {
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .container .qrCode a img {
+      width: 325px;
+      height: 325px;
+      border-radius: 12px;
+      margin-top: 15px;
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;     
+      
+    }
+    .container .parag {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .container .parag h2{
+      margin: 0px;      
+      font-family: Outfit;
+      font-weight:700;
+      color: hsl(218, 44%, 22%);
+      word-spacing: 2px;
+    }
+    .container .parag p{
+      margin: 0px;
+      padding-top: 15px;
+      padding-bottom: 5px;      
+      color: hsl(212, 45%, 89%);
+      font-family: Outfit;
+      font-weight:400;
+      font-size: 15px;
+      color: hsl(220, 15%, 55%);
+      word-spacing: 2px;
+    }
+    .attribution {
+      margin-top: 10px;
+      font-size: 12px;
+      font-family: outfit;
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      
+    };
+
+   
+    @media only screen and (max-width:375px) and (min-width:1440px) {
+      /* MAX-WIDTH = se o tamanho da tela for menor ou igual a max-width, então faça{...} */
+      /* MIN-WIDTH = se o tamanho da tela for maior ou igual a min-width, então faça{...} */
+      .body{width: 100vw;}
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="qrCode">
+      <a href="#"><img src="./images/image-qr-code.png" alt="QRCode"></a>
+    </div>
+    <div class="parag">
+      <h2>Improve your front-end <br> skills by building projects</h2>
+      <p>Scan the QR code to visit Frontend <br> Mentor and take your coding skills to <br>the next level</p>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Clar-Junior">CJunior</a>.
+  </div>
+</body>
+
+</html>
