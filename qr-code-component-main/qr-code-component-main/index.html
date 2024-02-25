@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | QR code component</title>
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>   
-  @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-  
-  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
 
-
-    body{
-      width: 100vw;
+    body {
+      width: 100dvw;
       height: 100vh;
       background: hsl(212, 45%, 89%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      
+
     }
+
     .container {
-      width: 360px;
-      height: 525px;
+      width: 400px;
+      /* height: 55%; */
       background: hsl(0, 0%, 100%);
-      border-radius: 18px;
-      /* display: flex;
+      border-radius: 22px;
+      display: flex;
       flex-direction: column;
-      align-items: center; */
+      align-items: center;
+      box-shadow: 8px 20px 15px hsla(0, 0%, 0%, 0.06);
+      transition: ease-in-out 700ms;
+
     }
 
     .container .qrCode a {
       display: flex;
       justify-content: center;
-      
+      align-items: start;
+      margin: 0px 0px;
+      padding: 15px 0px;
+
     }
 
     .container .qrCode a img {
-      width: 325px;
-      height: 325px;
-      border-radius: 12px;
-      margin-top: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      margin-bottom: 10px;     
-      
+      width: 90%;
+      height: 90%;
+      border-radius: 13px;
+      transition: ease-in-out 700ms;
+
     }
+
     .container .parag {
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 10px;
+      margin: 0px;
+      padding: 15px 0px;
     }
-    .container .parag h2{
-      margin: 0px;      
+
+    .container .parag h2 {
+      width: 80%;
+      margin: 0px;
       font-family: Outfit;
-      font-weight:700;
+      font-weight: 700;
       color: hsl(218, 44%, 22%);
       word-spacing: 2px;
     }
-    .container .parag p{
+
+    .container .parag p {
+      width: 67%;
       margin: 0px;
-      padding-top: 15px;
-      padding-bottom: 5px;      
       color: hsl(212, 45%, 89%);
       font-family: Outfit;
-      font-weight:400;
+      font-weight: 400;
       font-size: 15px;
       color: hsl(220, 15%, 55%);
       word-spacing: 2px;
+      padding: 15px 0px;
     }
+
     .attribution {
       margin-top: 10px;
       font-size: 12px;
@@ -84,16 +92,60 @@
       display: flex;
       justify-content: center;
       flex-flow: row wrap;
-      
-    };
+      text-align: center;
 
-   
-    @media only screen and (max-width:375px) and (min-width:1440px) {
-      /* MAX-WIDTH = se o tamanho da tela for menor ou igual a max-width, então faça{...} */
-      /* MIN-WIDTH = se o tamanho da tela for maior ou igual a min-width, então faça{...} */
-      .body{width: 100vw;}
+
     }
 
+    @media screen and (max-width:375px) {
+
+      /* MAX-WIDTH = se o tamanho da tela for menor ou igual a max-width, então faça{...} */
+      /* MIN-WIDTH = se o tamanho da tela for maior ou igual a min-width, então faça{...} */
+      body {
+        width: 100dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        transition: ease-in-out 700ms;
+      }
+
+      .container>.qrCode {
+        padding: 20px 10px;
+        margin: 0px 0px;
+      }
+
+      .container>.qrCode>a>img {
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+        transition: ease-in-out 700ms;
+
+      }
+
+      .container>.parag>h2 {
+        font-size: 1.3rem;
+      }
+
+      .container>.parag>p {
+        font-size: 0.88rem;
+      }
+
+      .attribution {
+        width: 78%;
+        font-size: 0.85rem;
+        text-align: center;
+      }
+
+    }
   </style>
 </head>
 
@@ -103,14 +155,17 @@
       <a href="#"><img src="./images/image-qr-code.png" alt="QRCode"></a>
     </div>
     <div class="parag">
-      <h2>Improve your front-end <br> skills by building projects</h2>
-      <p>Scan the QR code to visit Frontend <br> Mentor and take your coding skills to <br>the next level</p>
+      <h2>Improve your front-end skills by building projects</h2>
+      <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
     </div>
   </div>
-  
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/Clar-Junior">CJunior</a>.
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor.</a>
+      <br>
+      Coded by <a href="https://github.com/Clar-Junior">CJunior</a>.
+    </p>
   </div>
 </body>
 
